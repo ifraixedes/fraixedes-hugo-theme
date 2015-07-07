@@ -1,12 +1,19 @@
 {{ partial "header.html" . }}
-<h1 class="top-h">{{ .Title }}</h1>
-<h2 class="top-h">{{ .Site.Params.subtitle }}</h2>
-<dl class="main-list">
-{{ range first 10 .Data.Pages }}
-  <dt>
-    <a href="{{ .Permalink }}">{{ .Title }}</a>
-    <dd>{{ .Description }}</dd>
-  </dt>
-{{ end }}
-</dl>
+<div class="page-layout">
+  <h1 class="page-title title">{{ .Title }}</h1>
+  <h2 class="subtitle">{{ .Site.Params.subtitle }}</h2>
+  <div class="page-content">
+    <dl class="post-list">
+      {{ range first 10 .Data.Pages }}
+      <dt class="post-list-item-title">
+        <a href="{{ .Permalink }}">{{ .Title }}</a>
+        <dd class="post-list-item-desc">{{ .Description }}</dd>
+      </dt>
+      {{ end }}
+    </dl>
+  </div>
+  <div class="page-context">
+    <p> Some content </p>
+  </div>
+</div>
 {{ partial "footer.html" . }}
