@@ -1,0 +1,15 @@
+baseurl = "http://blog.fraixed.es"
+theme = "ifraixedes"
+languageCode = "en-gb"
+title = "Ivan Fraixedes' Blog"
+buildfrafts = false
+canonifyurls = false
+
+[permalinks]
+  post = "/post/:year/:month/:filename"
+
+[params]
+  subtitle = "Software Engineering, dev, hacks, tech community & thoughts"
+  description = "Opinionated Software Engineering & Dev Stuff, hacks, Tech Community and Start-ups and a bit of personal thoughts & theories"
+  author = "Ivan Fraixedes"
+  year = 2015

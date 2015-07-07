@@ -1,0 +1,12 @@
+{{ partial "header.html" . }}
+<h1 class="top-h">{{ .Title }}</h1>
+<h2 class="top-h">{{ .Site.Params.subtitle }}</h2>
+<dl class="main-list">
+{{ range first 10 .Data.Pages }}
+  <dt>
+    <a href="{{ .Permalink }}">{{ .Title }}</a>
+    <dd>{{ .Description }}</dd>
+  </dt>
+{{ end }}
+</dl>
+{{ partial "footer.html" . }}
