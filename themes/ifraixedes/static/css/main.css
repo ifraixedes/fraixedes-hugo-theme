@@ -1,121 +1,89 @@
 @import url(http://fonts.googleapis.com/css?family=Source+Code+Pro:200,400,700);
 
+/* DOM element styles */
 html {
   font-family: 'Source Code Pro', 'serif';
-  margin: 0;
 }
 
 body {
   background: none 0 0 transparent;
-  margin: auto;
-  width: 80vw
 }
 
-a {
-  color: rgba(63, 78, 255, 0.85);
-  text-decoration: none;
-}
-
-a:hover {
-  color: rgb(63, 78, 255);
-  font-weight: bolder;
-}
-
-a:visited {
-  color: rgb(121, 121, 121);
-}
-
-.main-list dt {
-  font-size: 1.5em;
-}
-
-dt {
-  margin: 1em 0 0 0;
-}
-
-body footer {
+footer {
   position: fixed;
   bottom: 0;
-  left: -2%;
-  width: 102%;
-  overflow: hidden;
-  background: none 0 0 rgba(230, 230, 230, 1);
-  z-index: 100
-}
-
-body footer div {
-  margin: 0 auto;
-}
-
-body footer h1 {
-  margin: 0;
-  top: 0;
-  text-align: center;
-  font-size: 0.8em;
-  font-weight: normal;
-}
-
-.top-h {
-  text-align: center;
+  width: 100vw;
 }
 
 h1 {
   font-size: 2em;
+}
+
+a {
+  color: #4682B4;
+  text-decoration: none;
+}
+
+a:hover {
+  font-style: italic;
+}
+
+a:visited {
+  color: #808080;
+}
+
+/* General classes */
+.title {
+  color: #4682B4;
+  font-weight: bold;
+  text-align: center;
+}
+
+.subtitle {
+  color: #2F4F4F;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Page related classes */
+.page-layout {
+  margin: auto;
+  width: 90vw;
+  position: relative;
+}
+
+.page-title {
   margin: 5vh 0 0 0;
-  color: rgb(0, 102, 154);
 }
 
-h2 {
-  color: rgb(19, 140, 201);
+.page-content {
+  float: left;
+  width: 75%;
+  padding: 0 1em 0 0;
 }
 
-h3 {
-  color: rgb(75, 155, 196);
-}
-
-.l-left {
-  padding: 5vh 0 0 0;
-  position: absolute;
-  vertical-align: middle;
-  height: 100%;
-  width: 20%;
-  text-align: left;
-}
-
-.l-left p {
-  margin: 1vh 0 0 1vw;
-  font-size: 0.9em;
-}
-
-.l-left img.face {
-  width: 150px;
-  height: 150px;
-  -webkit-border-radius: 150px;
-  -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
+.page-footer {
+  text-align: center;
   margin: auto;
 }
 
-.l-right {
-  position: relative;
+.page-context {
   float: right;
-  width: 75%;
-  margin: 2vh 0 5vh 0;
-  text-align: justify;
+  width: 23%;
+  margin: auto;
+  text-align: center
 }
 
-@media only screen and (max-width: 800px) {
-  h1 {
-    text-align: center;
-  }
+.post-list{
+}
 
-  .l-left {
-    position: relative;
-    width: 100%;
-    text-align: center;
-  }
+.post-list-item-title {
+  font-size: 1.2em;
+  margin: 1em 0 0.2em 0;
+}
 
-  .l-right {
-    width: 100%;
-    margin: 0 0 5vh 0;
-  }
+.post-list-item-desc {
+  margin: 0 0 0 0.5em;
+  text-align: justify;
+  font-size: 1em;
 }
