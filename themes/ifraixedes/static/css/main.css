@@ -45,29 +45,33 @@ a:visited {
   text-align: center;
 }
 
-/* Page related classes */
-.page-layout {
+/* layout related classes */
+.l-container {
   margin: auto;
   width: 90vw;
   position: relative;
 }
 
-.page-title {
+.l-title {
   margin: 5vh 0 0 0;
 }
 
-.page-content {
+.l-main {
+
+}
+
+.l-left-main {
   float: left;
   width: 75%;
   padding: 0 1em 0 0;
 }
 
-.page-footer {
+.l-footer {
   text-align: center;
   margin: auto;
 }
 
-.page-context {
+.l-right-side {
   float: right;
   width: 23%;
   margin: auto;
@@ -86,4 +90,14 @@ a:visited {
   margin: 0 0 0 0.5em;
   text-align: justify;
   font-size: 1em;
+}
+
+.timestamp {
+  float: right;
+}
+
+.content {
+  margin: 5vh 0 0 0;
+  font-size: 1em;
+  text-align: justify;
 }
