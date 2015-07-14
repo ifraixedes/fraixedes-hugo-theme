@@ -98,6 +98,13 @@ a:visited {
 
 .content {
   margin: 5vh 0 0 0;
-  font-size: 1em;
+  font-size: 1.2em;
   text-align: justify;
+}
+
+
+/*  classes names used by shortcodes */
+.highlight {
+  margin: 2em 1em;
+  font-size: 1.1em;
 }

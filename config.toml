@@ -4,6 +4,7 @@ languageCode = "en-gb"
 title = "Ivan Fraixedes' Blog"
 buildfrafts = false
 canonifyurls = false
+pygmentsstyle = "colorful"
 
 [permalinks]
   post = "/post/:year/:month/:filename"
