@@ -32,6 +32,11 @@ a:visited {
   color: #808080;
 }
 
+p > img {
+  width: 96%;
+  margin: 1em 2%;
+}
+
 /* General classes */
 .title {
   color: #4682B4;
@@ -101,7 +106,6 @@ a:visited {
   font-size: 1.2em;
   text-align: justify;
 }
-
 
 /*  classes names used by shortcodes */
 .highlight {
