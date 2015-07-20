@@ -14,3 +14,4 @@ pygmentsstyle = "colorful"
   description = "Opinionated Software Engineering & Dev Stuff, hacks, Tech Community and Start-ups and a bit of personal thoughts & theories"
   author = "Ivan Fraixedes"
   year = 2015
+  disqusShortname = "blog-ifraixedes"

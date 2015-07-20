@@ -1,10 +1,11 @@
 {{ partial "header.html" . }}
 <div class="l-container">
-  <h1 class="l-title title">{{ .Title }}</h1>
+  <a href="{{ .Permalink }}"><h1 class="l-title title">{{ .Title }}</h1></a>
   <div class="l-main content">
     <span class="timestamp">{{ .Date.Format "02-01-2006" }}</span>
     <br>
     {{ .Content }}
   </div>
+  {{ partial "disqus.html" . }}
 </div>
 {{ partial "footer.html" . }}
