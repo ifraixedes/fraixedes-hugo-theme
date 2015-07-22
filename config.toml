@@ -15,3 +15,4 @@ pygmentsstyle = "colorful"
   author = "Ivan Fraixedes"
   year = 2015
   disqusShortname = "blog-ifraixedes"
+  og_image = "https://avatars0.githubusercontent.com/u/1731633" # Optional: you can ommmit this variable if you don't want `<meta name="og:image"` as default in the pages which is not specified
