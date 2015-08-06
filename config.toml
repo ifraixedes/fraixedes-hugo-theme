@@ -7,7 +7,7 @@ canonifyurls = false
 pygmentsstyle = "colorful"
 
 [permalinks]
-  post = "/post/:year/:month/:filename"
+  post = "/post/:filename"
 
 [params]
   subtitle = "Software Engineering, dev, hacks, tech community & thoughts"
