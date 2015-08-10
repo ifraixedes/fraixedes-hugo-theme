@@ -4,7 +4,9 @@
   <h2 class="subtitle">{{ .Site.Params.subtitle }}</h2>
   <div class="l-left-main">
     <dl class="post-list">
-      {{ range first 10 .Data.Pages }}
+      {{ $paginator := .Paginate (where .Data.Pages "Type" "post") }}
+      {{ template "_internal/pagination.html" . }}
+      {{ range $paginator.Pages }}
       <dt class="post-list-item-title">
         <a href="{{ .Permalink }}">{{ .Title }}</a>
         <dd class="post-list-item-desc">{{ .Description }}</dd>
