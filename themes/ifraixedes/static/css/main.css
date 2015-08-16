@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Source+Code+Pro:200,400,700);
+/* @import url(http://fonts.googleapis.com/css?family=Source+Code+Pro:200,400,700); */
 
 /* DOM element styles */
 html {
@@ -7,12 +7,6 @@ html {
 
 body {
   background: none 0 0 transparent;
-}
-
-footer {
-  position: fixed;
-  bottom: 0;
-  width: 100vw;
 }
 
 h1 {
@@ -99,6 +93,7 @@ blockquote {
   color: #2F4F4F;
   font-weight: bold;
   text-align: center;
+  margin-bottom: 3em;
 }
 
 /* layout related classes */
@@ -117,14 +112,14 @@ blockquote {
 }
 
 .l-left-main {
-  float: left;
   width: 75%;
   padding: 0 1em 0 0;
+  min-height: 500px;
 }
 
 .l-footer {
   text-align: center;
-  margin: auto;
+  margin: 3em 0 0 0;
 }
 
 .l-right-side {
@@ -156,6 +151,49 @@ blockquote {
   margin: 5vh 0 0 0;
   font-size: 1.2em;
   text-align: justify;
+}
+
+
+.l-pagination {
+  margin: auto;
+  width: 100%;
+  text-align: center;
+}
+
+/* styling classes and structure for default pagination template (_internal/pagination.html) */
+.pagination {
+  margin: auto;
+  list-style: none;
+  font-weight: normal;
+}
+
+.pagination li {
+  display: inline;
+}
+
+.pagination [aria-label="First"] {
+  margin: 0 0.5em 0 0;
+}
+
+.pagination a {
+  margin: 0 0.2em 0 0.2em;
+}
+
+.pagination .active {
+  font-weight: bold;
+}
+
+
+.pagination [aria-label="Last"] {
+  margin: 0 0 0 0.5em;
+}
+
+.pagination [aria-label="Previous"] {
+  margin: 0 2em 0 0;
+}
+
+.pagination [aria-label="Next"] {
+  margin: 0 0 0 2em;
 }
 
 /*  classes names used by shortcodes */

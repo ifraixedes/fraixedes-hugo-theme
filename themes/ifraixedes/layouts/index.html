@@ -2,18 +2,21 @@
 <div class="l-container">
   <h1 class="l-title title">{{ .Title }}</h1>
   <h2 class="subtitle">{{ .Site.Params.subtitle }}</h2>
+  {{ partial "right-side.html" . }}
   <div class="l-left-main">
     <dl class="post-list">
       {{ $paginator := .Paginate (where .Data.Pages "Type" "post") }}
-      {{ template "_internal/pagination.html" . }}
       {{ range $paginator.Pages }}
       <dt class="post-list-item-title">
         <a href="{{ .Permalink }}">{{ .Title }}</a>
         <dd class="post-list-item-desc">{{ .Description }}</dd>
       </dt>
       {{ end }}
+      <hr>
+      <div class="l-pagination">
+        {{ template "_internal/pagination.html" . }}
+     </div>
     </dl>
   </div>
-  {{ partial "right-side.html" . }}
+  {{ partial "footer.html" . }}
 </div>
-{{ partial "footer.html" . }}

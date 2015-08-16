@@ -1,8 +1,9 @@
-{{ partial "header.html" . }}
-  {{ range .Data.Pages }}
-  <a href="{{ .Permalink }}">
-    <h1>{{ .Title }}</h1>
-    <p>{{ .Description }}</p>
-  </a>
-  {{ end }}
-{{ partial "footer.html" . }}
+  {{ partial "header.html" . }}
+    {{ range .Data.Pages }}
+    <a href="{{ .Permalink }}">
+      <h1>{{ .Title }}</h1>
+      <p>{{ .Description }}</p>
+    </a>
+    {{ end }}
+  </body>
+</html>
