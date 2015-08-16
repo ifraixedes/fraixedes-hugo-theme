@@ -6,6 +6,9 @@ buildfrafts = false
 canonifyurls = false
 pygmentsstyle = "colorful"
 
+[blackfriday]
+  fractions = false
+
 [permalinks]
   post = "/post/:filename"
 
