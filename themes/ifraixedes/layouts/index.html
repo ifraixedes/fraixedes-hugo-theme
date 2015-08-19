@@ -12,11 +12,11 @@
         <dd class="post-list-item-desc">{{ .Description }}</dd>
       </dt>
       {{ end }}
-      <hr>
-      <div class="l-pagination">
-        {{ template "_internal/pagination.html" . }}
-     </div>
     </dl>
+    <hr>
+    <div class="l-pagination">
+      {{ template "_internal/pagination.html" . }}
+    </div>
   </div>
   {{ partial "footer.html" . }}
 </div>
