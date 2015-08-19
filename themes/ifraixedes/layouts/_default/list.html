@@ -1,9 +1,17 @@
-  {{ partial "header.html" . }}
-    {{ range .Data.Pages }}
-    <a href="{{ .Permalink }}">
-      <h1>{{ .Title }}</h1>
-      <p>{{ .Description }}</p>
-    </a>
-    {{ end }}
-  </body>
-</html>
+{{ partial "header.html" . }}
+<div class="l-container">
+  <h1 class="l-title title">{{ .Site.Title }}</h1>
+  <h2 class="subtitle">{{ .Site.Params.subtitle }}</h2>
+  {{ partial "right-side.html" . }}
+  <div class="l-left-main">
+    <dl class="post-list">
+      {{ range .Data.Pages }}
+      <dt class="post-list-item-title">
+        <a href="{{ .Permalink }}">{{ .Title }}</a>
+        <dd class="post-list-item-desc">{{ .Description }}</dd>
+      </dt>
+      {{ end }}
+    </dl>
+  </div>
+  {{ partial "footer.html" . }}
+</div>
