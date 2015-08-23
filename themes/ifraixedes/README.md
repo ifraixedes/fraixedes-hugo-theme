@@ -1,6 +1,10 @@
 Ivan Fraixedes' Hugo Theme
 ==========================
 
+## Custom site parameters
+* authorName: The name to use to show as the author of the site
+* authorURL (optional): An URL to use in some places as a link to point author's name (authorName). If it isn't provided then the author's name would be used without any link
+
 ## Custom page parameters
 
 * Header partial

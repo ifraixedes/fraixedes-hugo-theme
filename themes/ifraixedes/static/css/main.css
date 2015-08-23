@@ -153,6 +153,16 @@ blockquote {
   text-align: justify;
 }
 
+.important-link {
+  font-weight: bold;
+  color: #2172B5;
+  font-size: 1.1em;
+}
+
+.important-link:visited {
+  color: #444444;
+}
+
 
 .l-pagination {
   margin: auto;
