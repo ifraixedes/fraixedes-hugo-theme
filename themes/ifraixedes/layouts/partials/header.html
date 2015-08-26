@@ -5,45 +5,45 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="HandheldFriendly" content="True">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="{{ if .Description }}{{ .Description }}{{ else }}{{ printf "%s by %s"  .Site.Params.description .Site.Params.authorName }}{{ end }}">
-  <meta name="og:site_name" content="{{ .Site.Title }}">
-  <meta name="og:title" content="{{ .Title }}">
-  <meta name="og:url" content="{{ .Permalink }}">
-  <meta name="og:description" content="{{ if .Description }}{{ .Description }}{{ else }}{{ printf "%s by %s"  .Site.Params.description .Site.Params.authorName }}{{ end }}">
-  <meta name="twitter:site" content="@{{ .Site.Params.twitter_username }}">
-  <meta name="twitter:title" content="{{ .Site.Title }}">
-  <meta name="twitter:description" content="{{ if .Description }}{{ .Description }}{{ else }}{{ printf "%s by %s"  .Site.Params.description .Site.Params.authorName }}{{ end }}">
-  {{ if .IsPage }}
-    {{ if .Params.social_image }}
-      <meta name="og:image" content="{{ .Params.social_image }}">
-      <meta name="twitter:image" content="{{ .Params.social_image }}">
-    {{ else }}
-      {{ with .Site.Params.social_image }}
-        <meta name="og:image" content="{{ . }}">
-      {{ end }}
-    {{ end }}
-    {{ if eq .Type "post" }}
+  <meta name="description" content="{{if .Description}}{{.Description}}{{else}}{{printf "%s by %s"  .Site.Params.description .Site.Params.authorName}}{{end}}">
+  <meta name="og:site_name" content="{{.Site.Title}}">
+  <meta name="og:title" content="{{.Title}}">
+  <meta name="og:url" content="{{.Permalink}}">
+  <meta name="og:description" content="{{if .Description}}{{.Description}}{{else}}{{printf "%s by %s"  .Site.Params.description .Site.Params.authorName}}{{end}}">
+  <meta name="twitter:site" content="@{{.Site.Params.twitter_username}}">
+  <meta name="twitter:title" content="{{.Site.Title}}">
+  <meta name="twitter:description" content="{{if .Description}}{{.Description}}{{else}}{{printf "%s by %s"  .Site.Params.description .Site.Params.authorName}}{{end}}">
+  {{if .IsPage}}
+    {{if .Params.social_image}}
+      <meta name="og:image" content="{{.Params.social_image}}">
+      <meta name="twitter:image" content="{{.Params.social_image}}">
+    {{else}}
+      {{with .Site.Params.social_image}}
+        <meta name="og:image" content="{{.}}">
+      {{end}}
+    {{end}}
+    {{if eq .Type "post"}}
       <meta name="og:type" content="article">
-      <meta name="og:author" content="{{ .Site.Params.authorName }}">
-      <meta name="og:published_time" content="{{ dateFormat "2006-01-02T15:04:05Z"  .PublishDate }}">
-      <meta name="og:modified_time" content="{{ if .Params.last_update_date }}{{ dateFormat "2006-01-02T15:04:05Z" .Params.last_update_date }}{{ else }}{{ dateFormat "2006-01-02T15:04:05Z" .PublishDate }}{{ end }}">
-      {{ with .Params.section }}<meta name="og:section" content="{{ . }}">{{ end }}
-      {{ range .Params.tags }}
+      <meta name="og:author" content="{{.Site.Params.authorName}}">
+      <meta name="og:published_time" content="{{dateFormat "2006-01-02T15:04:05Z"  .PublishDate}}">
+      <meta name="og:modified_time" content="{{if .Params.last_update_date}}{{dateFormat "2006-01-02T15:04:05Z" .Params.last_update_date}}{{else}}{{dateFormat "2006-01-02T15:04:05Z" .PublishDate}}{{end}}">
+      {{with .Params.section}}<meta name="og:section" content="{{.}}">{{end}}
+      {{range .Params.tags}}
         <meta name="og:tag" content="{{.}}">
-      {{ end }}
+      {{end}}
       <meta name:="twitter:card" content="summary_large_image">
-    {{ else }}
+    {{else}}
       <meta name="og:type" content="website">
       <meta name:="twitter:card" content="summary">
-    {{ end }}
-  {{ else }}
+    {{end}}
+  {{else}}
     <meta name="og:type" content="website">
-    {{ with .Site.Params.social_image }}
-      <meta name="og:image" content="{{ . }}">
-    {{ end }}
+    {{with .Site.Params.social_image}}
+      <meta name="og:image" content="{{.}}">
+    {{end}}
     <meta name:="twitter:card" content="summary">
-  {{ end }}
-  <link rel="canonical" href="{{ if isset .Params "canonical" }}{{ .Params.canonical }}{{ else  }}{{ .Permalink }}{{ end }}">
+  {{end}}
+  <link rel="canonical" href="{{if isset .Params "canonical"}}{{.Params.canonical}}{{else }}{{.Permalink}}{{end}}">
   <link rel="stylesheet" href="/css/main.css">
 </head>
 <body>

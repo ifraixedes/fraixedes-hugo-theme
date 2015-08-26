@@ -1,7 +1,7 @@
-<div class="l-footer">@{{ .Site.Params.year }} by
-  {{ if .Site.Params.authorURL }}
-  <a href="{{ .Site.Params.authorURL }}" target="_blank" class="important-link">{{ .Site.Params.authorName }}</a>
-  {{ else }}
-    {{ .Site.Params.authorName }}
-  {{ end }}
+<div class="l-footer">@{{.Site.Params.year}} by
+  {{if .Site.Params.authorURL}}
+  <a href="{{.Site.Params.authorURL}}" target="_blank" class="important-link">{{.Site.Params.authorName}}</a>
+  {{else}}
+    {{.Site.Params.authorName}}
+  {{end}}
 </div>

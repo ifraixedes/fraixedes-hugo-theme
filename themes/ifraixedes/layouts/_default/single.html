@@ -1,11 +1,11 @@
-{{ partial "header.html" . }}
+{{partial "header.html" .}}
 <div class="l-container">
-  <a href="{{ .Permalink }}"><h1 class="l-title title">{{ .Title }}</h1></a>
+  <a href="{{.Permalink}}"><h1 class="l-title title">{{.Title}}</h1></a>
   <div class="l-main content">
-    <span class="timestamp">{{ .Date.Format "02-01-2006" }}</span>
+    <span class="timestamp">{{.Date.Format "02-01-2006"}}</span>
     <br>
-    {{ .Content }}
+    {{.Content}}
   </div>
-  {{ partial "disqus.html" . }}
+  {{partial "disqus.html" .}}
 </div>
-{{ partial "footer.html" . }}
+{{partial "footer.html" .}}
