@@ -6,6 +6,10 @@
   <meta name="HandheldFriendly" content="True">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="{{if .Description}}{{.Description}}{{else}}{{printf "%s by %s"  .Site.Params.description .Site.Params.authorName}}{{end}}">
+  {{ if .RSSlink }}
+    <link href="{{ .RSSlink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
+    <link href="{{ .RSSlink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" />
+  {{ end }}
   <meta name="og:site_name" content="{{.Site.Title}}">
   <meta name="og:title" content="{{.Title}}">
   <meta name="og:url" content="{{.Permalink}}">
