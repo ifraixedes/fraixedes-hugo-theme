@@ -2,8 +2,16 @@ Ivan Fraixedes' Hugo Theme
 ==========================
 
 ## Custom site parameters
+
+This options are set in the site's configuration file (config.tmol|json|yml)
+
 * authorName: The name to use to show as the author of the site
 * authorURL (optional): An URL to use in some places as a link to point author's name (authorName). If it isn't provided then the author's name would be used without any link
+* social_image (optional): Site wide value, see the description in [custom page paremets section](#custom-page-parameters)
+* twitter_username: Site wide value, see the description in [custom page paremets section](#custom-page-parameters)
+* social_profiles (optional): List of social profiles which will be used to render the links to it, each element is a map with the following keys. There isn't maximum, however the template should be checked for 4 at most.
+  * name: A text to use for the content of the links
+  * url:  The URL to the social profile
 
 ## Custom page parameters
 

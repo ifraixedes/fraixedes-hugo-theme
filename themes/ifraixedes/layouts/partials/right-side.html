@@ -1,3 +1,13 @@
 <div class="l-right-side">
-  <img src="/img/img-300x300.png">
+  <a href="/index.xml" target="_blank" class="important-link">Track me in your RSS Reader</a>
+  {{if and (isset .Site.Params "social_profiles") .Site.Params.social_profiles}}
+  <hr>
+    {{$lastIdx := (sub (len .Site.Params.social_profiles) 1) }}
+    {{range $index, $profile := .Site.Params.social_profiles}}
+      <a href="{{$profile.url}}" target="_blank" rel="nofollow" class="important-link">{{$profile.name}}</a>
+      {{if ne $index $lastIdx}}<span class="horiz-sep">|</span>{{end}}
+    {{end}}
+  {{end}}
+  <br><br>
+  <!--<img src="/img/img-300x300.png">-->
 </div>
