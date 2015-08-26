@@ -1,6 +1,7 @@
 baseurl = "http://blog.fraixed.es"
 theme = "ifraixedes"
 languageCode = "en-gb"
+copyright = "This works is license under a Creative Commons Attribution-ShareAlike 4.0 International license"
 title = "Ivan Fraixedes' Blog"
 buildfrafts = false
 canonifyurls = false
@@ -15,8 +16,22 @@ pygmentsstyle = "colorful"
 [params]
   subtitle = "Software Engineering, dev, hacks, tech community & thoughts"
   description = "Opinionated Software Engineering & Dev Stuff, hacks, Tech Community and Start-ups and a bit of personal thoughts & theories"
-  author = "Ivan Fraixedes"
-  year = 2015
   disqusShortname = "blog-ifraixedes"
+  year = 2015
+  authorName = "Ivan Fraixedes"
+  authorURL = "http://ivan.fraixed.es" # Optional: you can ommit and author name will never be linked
+  contact_email = "xxxx@domain.com"
   social_image = "https://avatars0.githubusercontent.com/u/1731633" # Optional: you can ommmit this variable if you don't want `<meta name="og:image"` as default in the pages which is not specified
   twitter_username = "ifraixedes"
+  [[params.social_profiles]]
+    name = "t"
+    url = "https://twitter.com/ifraixedes"
+  [[params.social_profiles]]
+    name = "lk"
+    url = "http://linkedin.com/"
+  [[params.social_profiles]]
+    name = "g+"
+    url = "http://plus.google.com"
+  [[params.social_profiles]]
+    name = "fb"
+    url = "http://facebook.com/XXXXXXXXXX"
