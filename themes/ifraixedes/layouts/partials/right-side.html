@@ -1,13 +1,11 @@
 <div class="l-right-side">
   {{ if .RSSlink }}
-    <a href="{{.RSSlink}}" type="application/rss+xml" target="_blank" class="important-link">Track me in your RSS Reader</a>
+    <a href="{{.RSSlink}}" type="application/rss+xml" target="_blank" class="important-link grow-few" title="Add me to your RSS reader">READ ME</a>
   {{end}}
   {{if and (isset .Site.Params "social_profiles") .Site.Params.social_profiles}}
     {{ if .RSSlink }}<hr>{{end}}
-    {{$lastIdx := (sub (len .Site.Params.social_profiles) 1) }}
     {{range $index, $profile := .Site.Params.social_profiles}}
-      <a href="{{$profile.url}}" target="_blank" rel="nofollow" class="important-link">{{$profile.name}}</a>
-      {{if ne $index $lastIdx}}<span class="horiz-sep">|</span>{{end}}
+      <a href="{{$profile.url}}" target="_blank" rel="nofollow" class="important-link horiz-list-sep grow-big" title="{{$profile.description}}">{{$profile.name}}</a>
     {{end}}
   {{end}}
   <br><br>

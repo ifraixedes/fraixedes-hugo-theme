@@ -166,10 +166,32 @@ blockquote {
   color: #444444;
 }
 
+.grow-few:hover {
+  zoom: 1.4;
+  font-style: normal;
+}
+
+.grow-big:hover {
+  zoom: 1.8;
+  font-style: normal;
+}
+
 .horiz-sep {
   margin: 0 0.8em 0 0.8em;
   font-size: 1.1em;
   font-weight: bolder
+}
+
+.horiz-list {
+  list-style: none;
+}
+
+.horiz-list li {
+  display: inline;
+}
+
+.horiz-list-sep {
+  padding: 0 1em 0 1em;
 }
 
 .l-pagination {
