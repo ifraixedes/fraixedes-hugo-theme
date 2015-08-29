@@ -1,8 +1,6 @@
-/* @import url(http://fonts.googleapis.com/css?family=Source+Code+Pro:200,400,700); */
-
 /* DOM element styles */
 html {
-  font-family: 'Source Code Pro', 'serif';
+  font-family: 'serif';
 }
 
 body {
@@ -48,6 +46,11 @@ hr {
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
 }
 
+pre {
+  overflow: overlay;
+}
+
+
 .content-sep {
   margin: 3em 0 1em 0;
 }
@@ -71,6 +74,7 @@ p img {
 
 p + h2,h3,h4,h5 {
   margin: 1.8em 0 1.0em 0;
+  text-align: left;
 }
 
 blockquote {
@@ -162,36 +166,13 @@ blockquote {
   font-size: 1.1em;
 }
 
-.important-link:visited {
-  color: #444444;
-}
-
-.grow-few:hover {
-  zoom: 1.4;
-  font-style: normal;
-}
-
-.grow-big:hover {
-  zoom: 1.8;
+.grow:hover {
+  font-size: 1.3em;
   font-style: normal;
 }
 
 .horiz-sep {
-  margin: 0 0.8em 0 0.8em;
-  font-size: 1.1em;
-  font-weight: bolder
-}
-
-.horiz-list {
-  list-style: none;
-}
-
-.horiz-list li {
-  display: inline;
-}
-
-.horiz-list-sep {
-  padding: 0 1em 0 1em;
+  padding: 0 0.5em 0 0.5em;
 }
 
 .l-pagination {
@@ -240,4 +221,49 @@ blockquote {
 .highlight {
   margin: 2em 1em;
   font-size: 1.1em;
+}
+
+/* media queries */
+@media (max-width: 1020px) {
+  h1 {
+    font-size: 1.8em;
+  }
+
+  h2 {
+    font-size: 1.5em;
+  }
+
+  h3 {
+    font-size: 1.3em;
+  }
+
+  h4 {
+    font-size: 1.2em;
+  }
+
+  h5 {
+    font-size: 1.1em;
+  }
+
+  p + h2,h3,h4,h5 {
+    margin: 1.3em 0 0.8em 0;
+  }
+
+
+  .subtitle {
+    font-weight: 600;
+    margin-bottom: 1em;
+  }
+
+  .l-right-side {
+    float: none;
+    width: 100%;
+    text-align: center;
+  }
+
+  .l-left-main {
+    width: 100%;
+    text-align: center;
+    padding: 0;
+  }
 }
