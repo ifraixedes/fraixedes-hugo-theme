@@ -2,6 +2,13 @@
 <div class="l-container">
   <a href="{{.Permalink}}"><h1 class="l-title title">{{.Title}}</h1></a>
   <div class="l-main content">
+    {{if and (isset .Site.Params "social_profiles") .Site.Params.social_profiles}}
+      {{$lastIdx := (sub (len .Site.Params.social_profiles) 1) }}
+      {{range $index, $profile := .Site.Params.social_profiles}}
+        <a href="{{$profile.url}}" target="_blank" rel="nofollow" class="important-link horiz-sep" title="{{$profile.description}}">{{$profile.name}}</a>
+        {{if ne $index $lastIdx}}<span>|</span>{{end}}
+      {{end}}
+    {{end}}
     <span class="timestamp">{{.Date.Format "02-01-2006"}}</span>
     <br>
     {{.Content}}
