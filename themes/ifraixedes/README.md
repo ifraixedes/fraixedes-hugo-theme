@@ -11,6 +11,7 @@ This options are set in the site's configuration file (config.tmol|json|yml)
 * twitter_username: Site wide value, see the description in [custom page paremets section](#custom-page-parameters)
 * social_profiles (optional): List of social profiles which will be used to render the links to it, each element is a map with the following keys. There isn't maximum, however the template should be checked for 4 at most.
   * name: A text to use for the content of the links
+  * description: A extended text to use as "title" attribute value in the html elements
   * url:  The URL to the social profile
 
 ## Custom page parameters
