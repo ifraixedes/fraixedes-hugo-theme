@@ -1,7 +1,11 @@
 Ivan Fraixedes' Hugo Theme
 ==========================
 
-## Custom site parameters
+Theme for [Hugo static site generator](http://gohugo.io/) created initially for [my personal blog](http://blog.fraixed.es)
+
+## Theme configuration
+
+### Custom site parameters
 
 This options are set in the site's configuration file (config.tmol|json|yml)
 
@@ -14,7 +18,7 @@ This options are set in the site's configuration file (config.tmol|json|yml)
   * description: A extended text to use as "title" attribute value in the html elements
   * url:  The URL to the social profile
 
-## Custom page parameters
+### Custom page parameters
 
 * Header partial
  * canonical: Used to change the default canonical URL (`href`) from tag `<lin rel="canonical href="...`, default `Permalink` is used.
@@ -25,3 +29,7 @@ This options are set in the site's configuration file (config.tmol|json|yml)
  * twitter_username: The twitter username without @. It's used for things as meta tag's content `<meta name="twitter:site" content="...`
  * last_update_date: If it's set then is used for the value (`content`) of `<meta name="og:modified_time content="...`, otherwise `.PublishDate` is used
  * section: If it's set then is used for the value (`content`) of `<meta name=og:section content="...` otherwise the tag is omitted
+
+## License
+
+MIT read [LICENSE file](https://github.com/ifraixedes/fraixedes-hugo-theme/blob/master/LICENSE.md) for more information
