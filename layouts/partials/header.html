@@ -10,40 +10,37 @@
     <link href="{{ .RSSlink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
     <link href="{{ .RSSlink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" />
   {{ end }}
-  <meta name="og:site_name" content="{{.Site.Title}}">
-  <meta name="og:title" content="{{.Title}}">
-  <meta name="og:url" content="{{.Permalink}}">
-  <meta name="og:description" content="{{if .Description}}{{.Description}}{{else}}{{printf "%s by %s"  .Site.Params.description .Site.Params.authorName}}{{end}}">
+  <meta property="og:site_name" content="{{.Site.Title}}">
+  <meta property="og:title" content="{{.Title}}">
+  <meta property="og:url" content="{{.Permalink}}">
+  <meta property="og:description" content="{{if .Description}}{{.Description}}{{else}}{{printf "%s by %s"  .Site.Params.description .Site.Params.authorName}}{{end}}">
   <meta name="twitter:site" content="@{{.Site.Params.twitter_username}}">
-  <meta name="twitter:title" content="{{.Site.Title}}">
-  <meta name="twitter:description" content="{{if .Description}}{{.Description}}{{else}}{{printf "%s by %s"  .Site.Params.description .Site.Params.authorName}}{{end}}">
   {{if .IsPage}}
     {{if .Params.social_image}}
-      <meta name="og:image" content="{{.Params.social_image}}">
-      <meta name="twitter:image" content="{{.Params.social_image}}">
+      <meta property="og:image" content="{{.Params.social_image}}">
     {{else}}
       {{with .Site.Params.social_image}}
-        <meta name="og:image" content="{{.}}">
+        <meta property="og:image" content="{{.}}">
       {{end}}
     {{end}}
     {{if eq .Type "post"}}
-      <meta name="og:type" content="article">
-      <meta name="og:author" content="{{.Site.Params.authorName}}">
-      <meta name="og:published_time" content="{{dateFormat "2006-01-02T15:04:05Z"  .PublishDate}}">
-      <meta name="og:modified_time" content="{{if .Params.last_update_date}}{{dateFormat "2006-01-02T15:04:05Z" .Params.last_update_date}}{{else}}{{dateFormat "2006-01-02T15:04:05Z" .PublishDate}}{{end}}">
-      {{with .Params.section}}<meta name="og:section" content="{{.}}">{{end}}
+      <meta property="og:type" content="article">
+      <meta property="og:author" content="{{.Site.Params.authorName}}">
+      <meta property="og:published_time" content="{{dateFormat "2006-01-02T15:04:05Z"  .PublishDate}}">
+      <meta property="og:modified_time" content="{{if .Params.last_update_date}}{{dateFormat "2006-01-02T15:04:05Z" .Params.last_update_date}}{{else}}{{dateFormat "2006-01-02T15:04:05Z" .PublishDate}}{{end}}">
+      {{with .Params.section}}<meta property="og:section" content="{{.}}">{{end}}
       {{range .Params.tags}}
-        <meta name="og:tag" content="{{.}}">
+        <meta property="og:tag" content="{{.}}">
       {{end}}
       <meta name:="twitter:card" content="summary_large_image">
     {{else}}
-      <meta name="og:type" content="website">
+      <meta property="og:type" content="website">
       <meta name:="twitter:card" content="summary">
     {{end}}
   {{else}}
-    <meta name="og:type" content="website">
+    <meta property="og:type" content="website">
     {{with .Site.Params.social_image}}
-      <meta name="og:image" content="{{.}}">
+      <meta property="og:image" content="{{.}}">
     {{end}}
     <meta name:="twitter:card" content="summary">
   {{end}}
