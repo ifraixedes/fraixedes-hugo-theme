@@ -9,6 +9,8 @@ Theme for [Hugo static site generator](http://gohugo.io/) created initially for 
 
 This options are set in the site's configuration file (config.tmol|json|yml)
 
+* locale: The locale of your site; it's recommended to use a full locale (lang_variant); the theme get the first two characters of this value to set `lang` attribute in `html` tag and use the whole value for locale open graph property value.
+* description: Text which describe your site; it's used as a value for `description` meta tag and open graph description property
 * authorName: The name to use to show as the author of the site
 * authorURL (optional): An URL to use in some places as a link to point author's name (authorName). If it isn't provided then the author's name would be used without any link
 * social_image (optional): Site wide value, see the description in [custom page paremets section](#custom-page-parameters)

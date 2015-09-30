@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{substr .Site.Params.locale 0 2}}">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,11 +10,13 @@
     <link href="{{ .RSSlink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
     <link href="{{ .RSSlink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" />
   {{ end }}
+  <meta property="og:locale" content="{{.Site.Params.locale}}">
   <meta property="og:site_name" content="{{.Site.Title}}">
   <meta property="og:title" content="{{.Title}}">
   <meta property="og:url" content="{{.Permalink}}">
   <meta property="og:description" content="{{if .Description}}{{.Description}}{{else}}{{printf "%s by %s"  .Site.Params.description .Site.Params.authorName}}{{end}}">
   <meta name="twitter:site" content="@{{.Site.Params.twitter_username}}">
+  <meta name="twitter:creator" content="@{{.Site.Params.twitter_username}}">
   {{if .IsPage}}
     {{if .Params.social_image}}
       <meta property="og:image" content="{{.Params.social_image}}">
@@ -32,17 +34,17 @@
       {{range .Params.tags}}
         <meta property="og:tag" content="{{.}}">
       {{end}}
-      <meta name:="twitter:card" content="summary_large_image">
+      <meta name="twitter:card" content="summary_large_image">
     {{else}}
       <meta property="og:type" content="website">
-      <meta name:="twitter:card" content="summary">
+      <meta name="twitter:card" content="summary">
     {{end}}
   {{else}}
     <meta property="og:type" content="website">
     {{with .Site.Params.social_image}}
       <meta property="og:image" content="{{.}}">
     {{end}}
-    <meta name:="twitter:card" content="summary">
+    <meta name="twitter:card" content="summary">
   {{end}}
   <link rel="canonical" href="{{if isset .Params "canonical"}}{{.Params.canonical}}{{else }}{{.Permalink}}{{end}}">
   <link rel="stylesheet" href="/css/main.min.css">
