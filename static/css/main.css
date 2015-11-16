@@ -32,12 +32,12 @@ a {
   text-decoration: none;
 }
 
-a:hover {
-  font-style: italic;
-}
-
 a:visited {
   color: #808080;
+}
+
+a:hover {
+  color: #0334A0;
 }
 
 hr {
@@ -164,11 +164,6 @@ blockquote {
   font-weight: bold;
   color: #2172B5;
   font-size: 1.1em;
-}
-
-.grow:hover {
-  font-size: 1.3em;
-  font-style: normal;
 }
 
 .horiz-sep {
