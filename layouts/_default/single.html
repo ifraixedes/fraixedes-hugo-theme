@@ -13,7 +13,9 @@
     <br>
     {{.Content}}
   </div>
-  {{partial "disqus.html" .}}
+  {{if .Param "disqus_shortname"}}
+    {{partial "disqus.html" .}}
+  {{end}}
 </div>
 {{partial "footer.html" .}}
 {{partial "google-analytics.html" .}}

@@ -5,29 +5,23 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="HandheldFriendly" content="True">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="{{if .Description}}{{.Description}}{{else}}{{printf "%s by %s"  .Site.Params.description .Site.Params.authorName}}{{end}}">
-  {{ if .RSSlink }}
-    <link href="{{ .RSSlink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
-    <link href="{{ .RSSlink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" />
-  {{ end }}
+  <meta name="description" content="{{if .Description}}{{.Description}}{{else}}{{printf "%s by %s"  .Site.Params.description .Site.Params.author_name}}{{end}}">
+  <link href="{{ .Site.RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
+  <link href="{{ .Site.RSSLink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" />
   <meta property="og:locale" content="{{.Site.Params.locale}}">
   <meta property="og:site_name" content="{{.Site.Title}}">
   <meta property="og:title" content="{{.Title}}">
   <meta property="og:url" content="{{.Permalink}}">
-  <meta property="og:description" content="{{if .Description}}{{.Description}}{{else}}{{printf "%s by %s"  .Site.Params.description .Site.Params.authorName}}{{end}}">
+  <meta property="og:description" content="{{if .Description}}{{.Description}}{{else}}{{printf "%s by %s"  .Site.Params.description .Site.Params.author_name}}{{end}}">
   <meta name="twitter:site" content="@{{.Site.Params.twitter_username}}">
   <meta name="twitter:creator" content="@{{.Site.Params.twitter_username}}">
+  {{with .Param "social_image"}}
+    <meta property="og:image" content="{{.}}">
+  {{end}}
   {{if .IsPage}}
-    {{if .Params.social_image}}
-      <meta property="og:image" content="{{.Params.social_image}}">
-    {{else}}
-      {{with .Site.Params.social_image}}
-        <meta property="og:image" content="{{.}}">
-      {{end}}
-    {{end}}
     {{if eq .Type "post"}}
       <meta property="og:type" content="article">
-      <meta property="og:author" content="{{.Site.Params.authorName}}">
+      <meta property="og:author" content="{{.Site.Params.author_name}}">
       <meta property="og:published_time" content="{{dateFormat "2006-01-02T15:04:05Z"  .PublishDate}}">
       <meta property="og:modified_time" content="{{if .Params.last_update_date}}{{dateFormat "2006-01-02T15:04:05Z" .Params.last_update_date}}{{else}}{{dateFormat "2006-01-02T15:04:05Z" .PublishDate}}{{end}}">
       {{with .Params.section}}<meta property="og:section" content="{{.}}">{{end}}
@@ -47,7 +41,7 @@
     <meta name="twitter:card" content="summary">
   {{end}}
   <link rel="canonical" href="{{if isset .Params "canonical"}}{{.Params.canonical}}{{else }}{{.Permalink}}{{end}}">
-  <link rel="stylesheet" href="/css/main.min.css">
+  <link rel="stylesheet" href="/css/main.css">
   <title>{{.Title}}</title>
 </head>
 <body>
