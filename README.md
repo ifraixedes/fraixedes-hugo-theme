@@ -5,7 +5,19 @@ Theme for [Hugo static site generator](http://gohugo.io/) created initially for 
 
 ## Theme configuration
 
-### Custom site parameters
+## Environment Variables
+
+So far the theme only uses one environment variable, `HUGO_DEV`, to enable and disable content to render.
+
+If the variable exists and has a value different than an empty string then it is considered that Hugo is rendered for a development environment and those parts which aren't wanted for development will be disabled.
+
+The clear example of the usage of this variable is to render or not the Google Analytics snippet to avoid to collect analytics when the site is running in a development environment.
+
+### Parameters
+
+This section contains the parameters required and available to set in Hugo site configuration and other files
+
+#### Custom site parameters
 
 This options are set in the site's configuration file (config.tmol|json|yml)
 
@@ -24,7 +36,7 @@ This options are set in the site's configuration file (config.tmol|json|yml)
   * description: A extended text to use as "title" attribute value in the html elements
   * url:  The URL to the social profile
 
-### Custom page parameters
+#### Custom page parameters
 
 * Header partial
  * canonical: Used to change the default canonical URL (`href`) from tag `<link rel="canonical href="...`, default `Permalink` is used.
@@ -33,10 +45,10 @@ This options are set in the site's configuration file (config.tmol|json|yml)
     * For "nodes" __only `og:image` meta tag__ is added when parameter is defined in ___config.toml___ otherwise is omitted.
     * For "pages" when parameter is not defined in ___Front Matter___ the meta tag `twitter:image` is omitted and the meta tag `og:image` defaults to the value ___config.toml___ if exist otherwise it's omitted.
 
- ### Custom "post" type page parameters
+#### Custom "post" type page parameters
 
- * section: If it's set then is used for the value (`content`) of `<meta name=og:section content="...` otherwise the tag is omitted
- * last_update_date: If it's set then is used for the value (`content`) of `<meta name="og:modified_time content="...`, otherwise `.PublishDate` is used
+* section: If it's set then is used for the value (`content`) of `<meta name=og:section content="...` otherwise the tag is omitted
+* last_update_date: If it's set then is used for the value (`content`) of `<meta name="og:modified_time content="...`, otherwise `.PublishDate` is used
 
 ## License
 
