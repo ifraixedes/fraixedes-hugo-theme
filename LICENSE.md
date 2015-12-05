@@ -1,5 +1,4 @@
-License
-(The MIT License)
+The MIT License
 
 Copyright (c) 2015 [Ivan Fraixedes](http://ivan.fraixed.es) / <a href="mailto: ivan@fraixed.es">contact</a>
 
