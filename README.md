@@ -3,6 +3,17 @@ Ivan Fraixedes' Hugo Theme
 
 Theme for [Hugo static site generator](http://gohugo.io/) created initially for [my personal blog](http://blog.fraixed.es)
 
+## Theme versions
+
+I've started to tag the releases. The first tagged release is [v0.1.0](https://github.com/ifraixedes/fraixedes-hugo-theme/releases/tag/v0.1.0) and it's for using with [hugo v0.15.0](https://github.com/spf13/hugo/releases/tag/v0.15).
+
+I expect to be bumping minor versions for new features and breaking changes until I decide to launch the first version v1.0.0, as [semversion](http://semver.org/) defines, and I will track the Hugo version which the versions of this theme target.
+
+| Theme Version | Hugo Version |
+|---------------|--------------|
+| v0.1.0        | v0.15        |
+
+
 ## Theme configuration
 
 ## Environment Variables
