@@ -36,7 +36,6 @@ This options are set in the site's configuration file (config.tmol|json|yml)
 * subtitle: The short text that must introduce your site which sits under the title
 * description: Text which describe your site; it's used as a value for `description` meta tag and open graph description property
 * disqus_shortname (optional): The disqus short name to use; if it exists disqus will be embedded by pages using "layouts/_defaults/single.html" otherwise it disqus won't be embedded.
-* google_analytics: The Google analytics code to use
 * author_name: The name to use to show as the author of the site
 * author_url (optional): An URL to use in some places as a link to point author's name (authorName). If it isn't provided then the author's name would be used without any link
 * social_image (optional): Site wide value, see the description in [custom page paremets section](#custom-page-parameters)
