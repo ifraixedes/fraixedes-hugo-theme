@@ -3,7 +3,7 @@
   <a href="{{.Permalink}}"><h1 class="l-title title">{{.Title}}</h1></a>
   <div class="l-main content">
     {{if and (isset .Site.Params "social_profiles") .Site.Params.social_profiles}}
-    <a href="{{.Site.BaseURL}}" class="horiz-sep"><img src="{{.Site.BaseURL}}img/home.png"></a>
+    <a href="{{.Site.BaseURL}}" class="horiz-sep"><img src="{{.Site.BaseURL}}/img/home.png"></a>
       <span>|</span>
       {{$lastIdx := (sub (len .Site.Params.social_profiles) 1) }}
       {{range $index, $profile := .Site.Params.social_profiles}}
@@ -11,7 +11,7 @@
         {{if ne $index $lastIdx}}<span>|</span>{{end}}
       {{end}}
     {{else}}
-      <a href="{{.Site.BaseURL}}" class="home-icon"><img src="{{.Site.BaseURL}}img/home.png"></a>
+      <a href="{{.Site.BaseURL}}" class="home-icon"><img src="{{.Site.BaseURL}}/img/home.png"></a>
     {{end}}
     <span class="timestamp">{{.Date.Format "02-01-2006"}}</span>
     <br>
