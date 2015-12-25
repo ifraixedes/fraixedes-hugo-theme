@@ -80,6 +80,16 @@ p img {
   margin-left: 25%;
 }
 
+.video-group {
+  display: flex;
+  align-content: center;
+}
+
+.video-row {
+  float: left;
+  margin: 1em;
+}
+
 p + h2,h3,h4,h5 {
   margin: 1.8em 0 1.0em 0;
   text-align: left;
@@ -206,7 +216,6 @@ blockquote {
 .pagination .active {
   font-weight: bold;
 }
-
 
 .pagination [aria-label="Last"] {
   margin: 0 0 0 0.5em;
