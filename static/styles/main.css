@@ -72,6 +72,14 @@ p img {
   margin-left: 12.5%;
 }
 
+.graphic-small {
+  width: 50%;
+}
+
+.graphic-small-centre {
+  margin-left: 25%;
+}
+
 p + h2,h3,h4,h5 {
   margin: 1.8em 0 1.0em 0;
   text-align: left;
