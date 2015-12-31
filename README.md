@@ -11,7 +11,7 @@ I expect to be bumping minor versions for new features and breaking changes unti
 
 | Theme Version | Hugo Version |
 |---------------|--------------|
-| v0.1.0        | v0.15        |
+| v0.2.0        | v0.15        |
 
 
 ## Theme configuration
@@ -60,6 +60,10 @@ This options are set in the site's configuration file (config.tmol|json|yml)
 * section: If it's set then is used for the value (`content`) of `<meta name=og:section content="...` otherwise the tag is omitted
 * last_update_date: If it's set then is used for the value (`content`) of `<meta name="og:modified_time content="...`, otherwise `.PublishDate` is used
 
+## Extras
+
+This theme contains several [shortcodes](https://gohugo.io/extras/shortcodes/). The current available ones have been imported from [hugo-resources repo](https://github.com/ifraixedes/hugo-resources) and they are documented in the [repo site](http://ivan.fraixed.es/hugo-resources/).
+
 ## License
 
-MIT read [LICENSE file](https://github.com/ifraixedes/fraixedes-hugo-theme/blob/master/LICENSE.md) for more information
+MIT read [LICENSE file](https://github.com/ifraixedes/fraixedes-hugo-theme/blob/master/LICENSE.md) for more information.
