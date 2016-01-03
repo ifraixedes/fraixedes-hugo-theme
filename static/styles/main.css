@@ -80,6 +80,25 @@ p img {
   margin-left: 25%;
 }
 
+.image-group {
+  display: flex;
+  flex-flow: wrap;
+}
+
+.image-group .two {
+  flex: 1 50%;
+  text-align: center;
+}
+
+.image-group img {
+  width: 95%;
+}
+
+.image-group span {
+  width: 100%;
+  text-align: center;
+}
+
 .video-group {
   display: flex;
   align-content: center;
