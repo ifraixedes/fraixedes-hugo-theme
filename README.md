@@ -11,7 +11,7 @@ I expect to be bumping minor versions for new features and breaking changes unti
 
 | Theme Version | Hugo Version |
 |---------------|--------------|
-| v0.2.0        | v0.15        |
+| v0.3.0        | v0.15        |
 
 
 ## Theme configuration
