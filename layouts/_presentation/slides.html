@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="{{substr .Site.Params.locale 0 2}}">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="{{if .Description}}{{.Description}}{{else}}{{printf "%s by %s"  .Site.Params.description .Site.Params.author_name}}{{end}}">
+  <link href="{{ .Site.RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
+  <link href="{{ .Site.RSSLink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" />
+  <meta property="og:locale" content="{{.Site.Params.locale}}">
+  <meta property="og:site_name" content="{{.Site.Title}}">
+  <meta property="og:title" content="{{.Title}}">
+  <meta property="og:url" content="{{.Permalink}}">
+  <meta property="og:description" content="{{if .Description}}{{.Description}}{{else}}{{printf "%s by %s"  .Site.Params.description .Site.Params.author_name}}{{end}}">
+  <meta name="twitter:site" content="@{{.Site.Params.twitter_username}}">
+  <meta name="twitter:creator" content="@{{.Site.Params.twitter_username}}">
+  {{with .Param "social_image"}}
+    <meta property="og:image" content="{{.}}">
+  {{end}}
+  {{if .IsPage}}
+    {{if eq .Type "post"}}
+      <meta property="og:type" content="article">
+      <meta property="og:author" content="{{.Site.Params.author_name}}">
+      <meta property="og:published_time" content="{{dateFormat "2006-01-02T15:04:05Z"  .PublishDate}}">
+      <meta property="og:modified_time" content="{{if .Params.last_update_date}}{{dateFormat "2006-01-02T15:04:05Z" .Params.last_update_date}}{{else}}{{dateFormat "2006-01-02T15:04:05Z" .PublishDate}}{{end}}">
+      {{with .Params.section}}<meta property="og:section" content="{{.}}">{{end}}
+      {{range .Params.tags}}
+        <meta property="og:tag" content="{{.}}">
+      {{end}}
+      <meta name="twitter:card" content="summary_large_image">
+    {{else}}
+      <meta property="og:type" content="website">
+      <meta name="twitter:card" content="summary">
+    {{end}}
+  {{else}}
+    <meta property="og:type" content="website">
+    {{with .Site.Params.social_image}}
+      <meta property="og:image" content="{{.}}">
+    {{end}}
+    <meta name="twitter:card" content="summary">
+  {{end}}
+  <link rel="canonical" href="{{if isset .Params "canonical"}}{{.Params.canonical}}{{else }}{{.Permalink}}{{end}}">
+  <title>{{.Title}}</title>
+  <style>
+    @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+    @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+    @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+    body { font-family: 'Droid Serif'; }
+    h1, h2, h3 {
+      font-family: 'Yanone Kaffeesatz';
+      font-weight: normal;
+    }
+    .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+    #loader {
+      background: white;
+      width: 100vw;
+      height: 100vh;
+    }
+    #loader div {
+      position: absolute;
+      top: 30%;
+      left: 45%
+    }
+    #loader.hide {
+      display: none;
+    }
+    #source {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div id="loader"><div><img src="/img/loading.gif"></div></div>
+  <textarea id="source">{{.RawContent}}</textarea>
+  <script src="https://gnab.github.io/remark/downloads/remark-latest.min.js"></script>
+  <script>
+    var slideshow = remark.create();
+    document.getElementById('loader').classList.toggle('hide')
+  </script>
+  {{partial "google-analytics.html" .}}
+</body>
