@@ -1,6 +1,6 @@
 {{partial "header.html" .}}
 <div class="l-container">
-  <h1 class="l-title title">{{.Title}}</h1>
+  <a href="{{.Site.BaseURL}}"><h1 class="l-title title">{{.Title}}</h1><a/>
   <h2 class="subtitle">{{.Param "subtitle"}}</h2>
   {{partial "right-side.html" .}}
   <div class="l-left-main">
