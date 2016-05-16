@@ -129,6 +129,7 @@ blockquote {
 
 /* General classes */
 .title {
+  margin: 0 10vw 0 10vw;
   color: #4682B4;
   font-weight: bold;
   text-align: center;
@@ -193,7 +194,7 @@ blockquote {
 }
 
 .content {
-  margin: 5vh 0 0 0;
+  margin: 5vh 10vw 0 10vw;
   font-size: 1.2em;
   text-align: justify;
 }
@@ -256,7 +257,7 @@ blockquote {
 }
 
 /* media queries */
-@media (max-width: 1020px) {
+@media (max-width: 1024px) {
   h1 {
     font-size: 1.8em;
   }
@@ -297,5 +298,23 @@ blockquote {
     width: 100%;
     text-align: center;
     padding: 0;
+  }
+
+  .title {
+    margin: 5vh 0vw 0 0vw;
+  }
+
+  .content {
+    margin: 5vh 5vw 0 5vw;
+  }
+}
+
+@media (max-width: 736px) {
+  .title {
+    margin: 5vh 0vw 0 0vw;
+  }
+
+  .content {
+    margin: 5vh 0vw 0 0vw;
   }
 }
